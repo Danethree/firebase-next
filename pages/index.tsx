@@ -11,6 +11,7 @@ import Input from '../Components/Input'
 import Button from '../Components/Button'
 
 import firebase from '../firebaseConnection'
+import Footer from '../Components/Footer'
 const Home: NextPage = () => {
   const [name,setName] = useState<String>('')
   const [email,setEmail] = useState<String>('')
@@ -65,23 +66,12 @@ const Home: NextPage = () => {
 
         <Button 
         name = "Salvar Usuário"
-        clicked = {handleSave}        />
+        clicked = {handleSave}  />
       </FormContent>
       
       </Main>
 
-      <footer className={styles.footer}>
-        <a
-          href="https://vercel.com?utm_source=create-next-app&utm_medium=default-template&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Powered by{' '}
-          <span className={styles.logo}>
-            <Image src="/vercel.svg" alt="Vercel Logo" width={72} height={16} />
-          </span>
-        </a>
-      </footer>
+     <Footer/>
     </>
   )
 }
